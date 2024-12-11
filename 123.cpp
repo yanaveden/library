@@ -46,6 +46,20 @@ void Employee::setNameLibrary(string nameLibrary) {
     this->_nameLibrary = nameLibrary;
 }
 
+double Employee::getSalary() {
+    return _salary;
+}
+
+void Employee::setSalary(double salary) {
+    this->_salary = salary; 
+}
+
+void Employee::showInfo() {
+    User::showInfo();
+    cout << "Библиотека: " << _nameLibrary << endl;
+    cout << "Зарплата: " << _salary << endl;
+}
+
 //--------------------------------------------------------------------------------
 
 
@@ -73,17 +87,4 @@ void Client::setBilet(int bilet) {
 void Client::showInfo() {
     User::showInfo();
     cout << "Номер читательского билета: " << _bilet << endl;
-}
-double Employee::getSalary() {
-    return _salary;
-}
-
-void Employee::setSalary(double salary) {
-    this->_salary = salary; 
-}
-
-void Employee::showInfo() {
-    User::showInfo();
-    cout << "Библиотека: " << _nameLibrary << endl;
-    cout << "Зарплата: " << _salary << endl;
 }
